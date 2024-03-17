@@ -1,0 +1,157 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Include padding and border in element's total width and height */
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    color: whitesmoke;
+    margin: 0;
+    text-align: center;
+    font-family: "PT Serif", serif;
+}
+a {
+    color:whitesmoke;
+    font-family: "PT Serif", serif;
+    margin: 10px 20px;
+    text-decoration: none;
+}
+.top-container {
+    background: rgb(36, 33, 33);
+    min-height: 100vh; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.hello {
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+    text-align: left; /* Align text to the left */
+    color: whitesmoke;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Keep vertical alignment at the top */
+    align-items: flex-start; /* Align items to the left */
+    position: relative; /* Needed for z-index to work */
+    z-index: 2;
+}
+
+.programmer {
+    font-size: x-large;
+}
+
+.name {
+    color: #007bff;
+}
+
+.image {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+
+.dev {
+    height: 300px;
+    border: none;
+    margin: 0;
+}
+.pro{
+    text-decoration: underline;
+}
+.mid-container {
+    margin: 100px 0;
+    outline: 100px solid  rgb(36, 33, 33);
+    background:rgb(36, 33, 33) ;
+}
+
+.profile {
+    text-align: center;
+    
+    font-family: "PT Serif", serif;
+    font-weight: 400;
+    font-style: normal;
+}
+.pic{
+    height: 160px;
+    width: 160px;
+    border: none;
+    margin: 0;
+    top: 50px;
+}
+
+h2{
+    display: block;
+    font-size: 2.5rem;
+    padding-bottom: 10px;
+    color: #007bff;
+}
+.intro{
+    display: block;
+    color: whitesmoke;
+}
+
+hr{
+    border: dotted #eaf6f6 6px;
+    border-bottom: none;
+    width: 4%;
+    margin: 100px auto;
+}
+.parent{
+    display: grid;
+    grid-template-columns: 0.5fr 1fr;
+    grid-template-rows: repeat(1, 1fr);
+    width: 50%;
+    margin: 100px auto 0 auto;
+    text-align: left;
+    row-gap: 2rem;
+}
+img{
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.contact-message {
+    width: 40%;
+    margin: 40px auto 60px;
+}
+
+.btn {
+    background-color: transparent;
+    border: 2px solid #007bff;
+    color: #007bff;
+    font-size: 16px;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+    border-radius: 5px; /* Adjust the border radius to make the corners more or less square */
+}
+
+
+.bottom-container {
+    background-color:#3F3F3F;
+    padding: 50px 0 20px;
+}
+
+
+@media (max-width: 800px) {
+    .top-container {
+        flex-direction: column;
+    }
+
+    .intro {
+        padding: 10px; /* Adjust padding for smaller screens */
+    }
+
+    .dev {
+        margin-top: 20px; /* Add margin-top to center the image on smaller screens */
+    }
+}
+ 
