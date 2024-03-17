@@ -1,26 +1,30 @@
+
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Include padding and border in element's total width and height */
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0;
-    padding: 0;
     color: whitesmoke;
-    margin: 0;
     text-align: center;
     font-family: "PT Serif", serif;
 }
+
 a {
-    color:whitesmoke;
+    color: whitesmoke;
     font-family: "PT Serif", serif;
     margin: 10px 20px;
     text-decoration: none;
 }
+
+div {
+    display: block;
+}
+
 .top-container {
     background: rgb(36, 33, 33);
-    min-height: 100vh; 
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -30,14 +34,14 @@ a {
     font-family: "PT Serif", serif;
     font-weight: 400;
     font-style: normal;
-    text-align: left; /* Align text to the left */
+    text-align: left;
     color: whitesmoke;
     padding: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Keep vertical alignment at the top */
-    align-items: flex-start; /* Align items to the left */
-    position: relative; /* Needed for z-index to work */
+    justify-content: flex-start;
+    align-items: flex-start;
+    position: relative;
     z-index: 2;
 }
 
@@ -55,29 +59,30 @@ a {
     z-index: 1;
 }
 
-
 .dev {
     height: 300px;
     border: none;
     margin: 0;
 }
-.pro{
+
+.pro {
     text-decoration: underline;
 }
+
 .mid-container {
     margin: 100px 0;
-    outline: 100px solid  rgb(36, 33, 33);
-    background:rgb(36, 33, 33) ;
+    outline: 100px solid rgb(36, 33, 33);
+    background: rgb(36, 33, 33);
 }
 
 .profile {
     text-align: center;
-    
     font-family: "PT Serif", serif;
     font-weight: 400;
     font-style: normal;
 }
-.pic{
+
+.pic {
     height: 160px;
     width: 160px;
     border: none;
@@ -85,24 +90,26 @@ a {
     top: 50px;
 }
 
-h2{
+h2 {
     display: block;
     font-size: 2.5rem;
     padding-bottom: 10px;
     color: #007bff;
 }
-.intro{
+
+.intro {
     display: block;
     color: whitesmoke;
 }
 
-hr{
+hr {
     border: dotted #eaf6f6 6px;
     border-bottom: none;
     width: 4%;
     margin: 100px auto;
 }
-.parent{
+
+.parent {
     display: grid;
     grid-template-columns: 0.5fr 1fr;
     grid-template-rows: repeat(1, 1fr);
@@ -111,10 +118,18 @@ hr{
     text-align: left;
     row-gap: 2rem;
 }
-img{
+
+.barens {
     overflow-clip-margin: content-box;
     overflow: clip;
+    height: 200px;
+    width: 200px;
 }
+
+h3 {
+    color: #007bff;
+}
+
 .contact-message {
     width: 40%;
     margin: 40px auto 60px;
@@ -131,16 +146,15 @@ img{
     display: inline-block;
     margin: 20px;
     cursor: pointer;
-    border-radius: 5px; /* Adjust the border radius to make the corners more or less square */
+    border-radius: 5px;
 }
 
-
 .bottom-container {
-    background-color:#3F3F3F;
+    background-color: #3f3f3f;
     padding: 50px 0 20px;
 }
 
-
+/* Media queries for responsiveness */
 @media (max-width: 800px) {
     .top-container {
         flex-direction: column;
@@ -154,4 +168,40 @@ img{
         margin-top: 20px; /* Add margin-top to center the image on smaller screens */
     }
 }
- 
+@media only screen and (max-width: 1200px) {
+    .parent {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media only screen and (max-width: 800px) {
+    .mid-container {
+        padding: 20px;
+    }
+
+    .parent {
+        width: 90%;
+    }
+
+    .pic {
+        height: 120px;
+        width: 120px;
+    }
+
+    .barens {
+        height: 150px;
+        width: 150px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .pic {
+        height: 100px;
+        width: 100px;
+    }
+
+    .barens {
+        height: 120px;
+        width: 120px;
+    }
+}
